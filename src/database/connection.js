@@ -16,9 +16,7 @@ const config = {
 	// },
 };
 
-connect();
-
-async function connect() {
+export async function connection() {
 	try {
 		const pool = await sql.connect({
 			server: process.env.DB_SERVER,
