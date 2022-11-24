@@ -1,10 +1,20 @@
-import { Router } from 'express';
-import { getCustomers } from '../controllers/customer';
+import { Router } from 'express'
+import {
+  getCustomers,
+  viewCreateCorporateCustomer,
+  viewCreatePrivateCustomer,
+} from '../controllers/customer'
 
 const router = Router();
 
 //OBTENER TODOS LOS CLIENTES
-router.get('/', getCustomers);
+router.get('/', getCustomers)
+
+//FORMULARIO NUEVO CLIENTE PARTICULAR
+router.get('/create-private', viewCreatePrivateCustomer)
+
+//FORMULARIO NUEVO CLIENTE CORPORATIVO
+router.get('/create-corporate', viewCreateCorporateCustomer)
 
 //CARGAR UN CLIENTE
 router.post('/');

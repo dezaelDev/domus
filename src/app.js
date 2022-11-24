@@ -29,8 +29,10 @@ app.set('view engine', 'ejs');
 app.engine('ejs', engine.__express);
 
 //ROUTES
-app.use('/customers', customerRoutes);
-app.use('/test', testRoutes);
-app.use('/realestates', realestateRoutes);
+app.use('/customers', customerRoutes)
+app.use('/customers', express.static(path.join(__dirname + '/public')))
+app.use('/test', testRoutes)
+app.use('/test', express.static(path.join(__dirname + '/public')))
+app.use('/realestates', realestateRoutes)
 
 export default app;

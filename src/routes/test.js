@@ -6,10 +6,10 @@ import { getCities } from '../models/city';
 const router = Router();
 
 router.get('/', async (req, res) => {
-	res.render('partials/test/agente_nuevaPropiedad', {
-		customers: await getCustomers(),
-		provinces: await getProvinces(),
-		cities: await getCities(),
+  res.render('partials/test/agente_nuevaPropiedad', {
+    customers: await getCustomers(),
+    provinces: await getProvinces(),
+    cities: await getCities(),
 	});
 });
 
@@ -21,6 +21,8 @@ router.put('/:id');
 
 router.delete('/:id');
 
-router.get('/:id');
+router.get('/cita', async (req, res) => {
+  res.render('partials/test/cita')
+})
 
 export default router;

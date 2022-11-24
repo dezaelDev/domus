@@ -8,12 +8,20 @@ export const getCustomers = async (req, res, fields) => {
 
 	const result = await pool.request().query(`SELECT * FROM ${$tableName}`);
 
-	res.render('partials/customer/index', {
-		customers: result.recordset,
-		error: null,
-		success: null,
-	});
-};
+  res.render('partials/customer/index', {
+    customers: result.recordset,
+    error: null,
+    success: null,
+  })
+}
+
+export const viewCreatePrivateCustomer = async (req, res) => {
+  res.render('partials/customer/secretaria_nuevoClienteParticular')
+}
+
+export const viewCreateCorporateCustomer = async (req, res) => {
+  res.render('partials/customer/secretaria_nuevoClienteCorporativo')
+}
 
 export const createCustomer = async (req, res) => {};
 
