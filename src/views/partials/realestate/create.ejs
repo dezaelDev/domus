@@ -370,34 +370,25 @@
 											style="width: 100%"
 											name="ambiente_nombre"
 										>
-											<option>_</option>
-											<option value="0">
+											<option
+												disabled
+												selected
+											>
+												elija una opción
+											</option>
+											<option>
 												Dormitorio
 											</option>
-											<option value="1">
-												Cochera
-											</option>
-											<option value="2">
-												Cocina
-											</option>
-											<option value="3">
-												Comedor
-											</option>
-											<option value="4">
-												Baño
-											</option>
-											<option value="5">
-												Estar
-											</option>
-											<option value="6">
+											<option>Cochera</option>
+											<option>Cocina</option>
+											<option>Comedor</option>
+											<option>Baño</option>
+											<option>Estar</option>
+											<option>
 												Ante baño
 											</option>
-											<option value="7">
-												Patio
-											</option>
-											<option value="8">
-												Quincho
-											</option>
+											<option>Patio</option>
+											<option>Quincho</option>
 										</select>
 									</div>
 								</div>
@@ -467,6 +458,7 @@
                   class="form-control"
                   id="${data.id}SuperficieInput"
                   placeholder="Ingrese ..."
+				  name="ambiente_superficie"
                 />
               </div>
             `);
@@ -478,9 +470,9 @@
                 <select
                   class="select2 ${elementSelect2}"
                   style="width: 100%"
-				  name="ambiente_nombre_${data.id}"
+				  name="ambiente_nombre"
                 >
-                  <option>_</option>
+                  <option disabled selected>Elija una opción</option>
                   <option>Dormitorio</option>
                   <option>Cochera</option>
                   <option>Cocina</option>
