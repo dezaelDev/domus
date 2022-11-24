@@ -27,7 +27,7 @@
 	<!-- Main content -->
 	<section class="content">
 		<div class="container-fluid">
-			<form action="">
+			<form action="/realestates/create" method="POST">
 				<div class="row">
 					<!-- left column -->
 					<div class="col-md-6">
@@ -72,28 +72,20 @@
 											<select
 												class="form-control select2"
 												style="width: 100%"
+												name="id_tipo_propiedad"
 											>
-												<option>
-													Casa
+												<%
+												realestates_types.forEach(function(type)
+												{ %>
+
+												<option
+													value="<%= type.id_tipo_propiedad%>"
+												>
+													<%= type.nombre
+													%>
 												</option>
-												<option>
-													Local
-												</option>
-												<option>
-													Casa con local
-												</option>
-												<option>
-													Departamento
-												</option>
-												<option>
-													Chalet
-												</option>
-												<option>
-													Cabaña
-												</option>
-												<option>
-													Cochera
-												</option>
+
+												<% }); %>
 											</select>
 										</div>
 									</div>
@@ -104,6 +96,7 @@
 										class="form-control"
 										rows="2"
 										placeholder="Ingrese ..."
+										name="descripcion_breve"
 									></textarea>
 								</div>
 								<label>Descripción detallada</label>
@@ -111,6 +104,7 @@
 									class="form-control"
 									rows="10"
 									placeholder="Ingrese ..."
+									name="descripcion_detallada"
 								></textarea>
 							</div>
 							<!-- /.card-body -->
@@ -133,7 +127,8 @@
 												class="custom-control-input"
 												type="checkbox"
 												id="luzCheckbox"
-												value="option1"
+												value="1"
+												name="servicio_luz"
 											/>
 											<label
 												for="luzCheckbox"
@@ -150,7 +145,8 @@
 												class="custom-control-input"
 												type="checkbox"
 												id="aguaCheckbox"
-												value="option1"
+												name="servicio_agua"
+												value="1"
 											/>
 											<label
 												for="aguaCheckbox"
@@ -167,7 +163,8 @@
 												class="custom-control-input"
 												type="checkbox"
 												id="gasCheckbox"
-												value="option1"
+												name="servicio_gas"
+												value="1"
 											/>
 											<label
 												for="gasCheckbox"
@@ -186,29 +183,13 @@
 												class="custom-control-input"
 												type="checkbox"
 												id="internetCheckbox"
-												value="option1"
+												value="1"
+												name="servicio_internet"
 											/>
 											<label
 												for="internetCheckbox"
 												class="custom-control-label"
 												>Internet</label
-											>
-										</div>
-									</div>
-									<div class="col-sm-4">
-										<div
-											class="custom-control custom-checkbox"
-										>
-											<input
-												class="custom-control-input"
-												type="checkbox"
-												id="televisionCheckbox"
-												value="option1"
-											/>
-											<label
-												for="televisionCheckbox"
-												class="custom-control-label"
-												>Televisión</label
 											>
 										</div>
 									</div>
@@ -237,8 +218,9 @@
 														class="custom-control-input"
 														type="radio"
 														id="ventaRadio"
-														name="tipoDeContratoRadio"
+														name="tipo_oferta"
 														checked
+														value="venta"
 													/>
 													<label
 														for="ventaRadio"
@@ -255,7 +237,8 @@
 														class="custom-control-input"
 														type="radio"
 														id="alquilerRadio"
-														name="tipoDeContratoRadio"
+														name="tipo_oferta"
+														value="alquiler"
 													/>
 													<label
 														for="alquilerRadio"
@@ -281,6 +264,7 @@
 												type="number"
 												step="any"
 												class="form-control"
+												name="precio_inmueble"
 											/>
 										</div>
 									</div>
@@ -346,6 +330,7 @@
 											class="form-control"
 											id="calleInput"
 											placeholder="Ingrese ..."
+											name="calle"
 										/>
 									</div>
 									<div class="col-sm-4">
@@ -357,6 +342,7 @@
 											class="form-control"
 											id="alturaInput"
 											placeholder="Ingrese ..."
+											name="altura"
 										/>
 									</div>
 								</div>
@@ -380,6 +366,7 @@
 										<select
 											class="select2 agregarAmbiente"
 											style="width: 100%"
+											name="ambiente_nombre"
 										>
 											<option>_</option>
 											<option value="0">
@@ -408,9 +395,6 @@
 											</option>
 											<option value="8">
 												Quincho
-											</option>
-											<option value="9">
-												Patio
 											</option>
 										</select>
 									</div>
@@ -492,6 +476,7 @@
                 <select
                   class="select2 ${elementSelect2}"
                   style="width: 100%"
+				  name="ambiente_nombre_${data.id}"
                 >
                   <option>_</option>
                   <option>Dormitorio</option>

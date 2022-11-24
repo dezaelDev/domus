@@ -1,16 +1,16 @@
 import { Router } from 'express';
-import { createRealEstates } from '../controllers/realestate';
+import { createRealEstates, storeRealEstates } from '../controllers/realestate';
 
 const router = Router();
 
 //OBTENER TODOS LOS PROPIEDADS
 router.get('/');
 
-//formulario nueva propiedad
-router.get('/crear', createRealEstates);
-
 //CARGAR UNA PROPIEDAD
-router.post('/');
+router.post('/create', storeRealEstates);
+
+//FORMULARIO NUEVA PROPIEDAD
+router.get('/create', createRealEstates);
 
 //ACTUALIZAR UNA PROPIEDAD
 router.put('/:id');

@@ -34,3 +34,5 @@ export async function connection() {
 		console.log(error);
 	}
 }
+
+export { sql };
