@@ -241,316 +241,534 @@
 					<div class="container-fluid">
 						<div class="row">
 							<!-- left column -->
-							<div class="col-md-6">
-								<!-- general form elements -->
-
+							<div>
 								<form action="/test" method="POST">
-									<div class="card card-secondary">
-										<div class="card-header">
-											<h3 class="card-title">
-												Propiedad
-											</h3>
-										</div>
-										<!-- /.card-header -->
-										<!-- form start -->
+									<div class="col-md-6">
+										<!-- general form elements -->
 
-										<div class="card-body">
-											<div class="form-group">
-												<div class="row">
-													<div
-														class="col-sm-6"
-													>
-														<label
-															>Propietario</label
-														>
-														<select
-															class="form-control select2"
-															style="
-																width: 100%;
-															"
-															name="id_cliente_propietario"
-														>
-															<%
-															customers.forEach(function(customer)
-															{ %>
-
-															<option
-																value="<%= customer.id_cliente%>"
-															>
-																<%=
-																customer.nombre_apellido
-																%>
-															</option>
-
-															<%
-															});
-															%>
-														</select>
-													</div>
-													<div
-														class="col-sm-6"
-													>
-														<label
-															>Tipo</label
-														>
-														<select
-															class="form-control select2"
-															style="
-																width: 100%;
-															"
-														>
-															<option>
-																Casa
-															</option>
-															<option>
-																Local
-															</option>
-															<option>
-																Casa
-																con
-																local
-															</option>
-															<option>
-																Departamento
-															</option>
-															<option>
-																Chalet
-															</option>
-															<option>
-																Cabaña
-															</option>
-															<option>
-																Cochera
-															</option>
-														</select>
-													</div>
-												</div>
+										<div
+											class="card card-secondary"
+										>
+											<div class="card-header">
+												<h3
+													class="card-title"
+												>
+													Propiedad
+												</h3>
 											</div>
-											<div class="form-group">
-												<label
-													>Descripción
-													breve</label
-												>
-												<textarea
-													class="form-control"
-													rows="2"
-													placeholder="Ingrese ..."
-												></textarea>
-											</div>
-											<label
-												>Descripción
-												detallada</label
-											>
-											<textarea
-												class="form-control"
-												rows="10"
-												placeholder="Ingrese ..."
-											></textarea>
-										</div>
-										<!-- /.card-body -->
-									</div>
+											<!-- /.card-header -->
+											<!-- form start -->
 
-									<div class="card card-secondary">
-										<div class="card-header">
-											<h3 class="card-title">
-												Servicios
-											</h3>
-										</div>
-										<!-- /.card-header -->
-										<!-- form start -->
-
-										<div class="card-body">
-											<div class="row">
+											<div class="card-body">
 												<div
-													class="col-sm-4"
+													class="form-group"
 												>
-													<div
-														class="custom-control custom-checkbox"
-													>
-														<input
-															class="custom-control-input"
-															type="checkbox"
-															id="luzCheckbox"
-															value="option1"
-														/>
-														<label
-															for="luzCheckbox"
-															class="custom-control-label"
-															>Luz</label
-														>
-													</div>
-												</div>
-												<div
-													class="col-sm-4"
-												>
-													<div
-														class="custom-control custom-checkbox"
-													>
-														<input
-															class="custom-control-input"
-															type="checkbox"
-															id="aguaCheckbox"
-															value="option1"
-														/>
-														<label
-															for="aguaCheckbox"
-															class="custom-control-label"
-															>Agua</label
-														>
-													</div>
-												</div>
-												<div
-													class="col-sm-4"
-												>
-													<div
-														class="custom-control custom-checkbox"
-													>
-														<input
-															class="custom-control-input"
-															type="checkbox"
-															id="gasCheckbox"
-															value="option1"
-														/>
-														<label
-															for="gasCheckbox"
-															class="custom-control-label"
-															>Gas</label
-														>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div
-													class="col-sm-4"
-												>
-													<div
-														class="custom-control custom-checkbox"
-													>
-														<input
-															class="custom-control-input"
-															type="checkbox"
-															id="internetCheckbox"
-															value="option1"
-														/>
-														<label
-															for="internetCheckbox"
-															class="custom-control-label"
-															>Internet</label
-														>
-													</div>
-												</div>
-												<div
-													class="col-sm-4"
-												>
-													<div
-														class="custom-control custom-checkbox"
-													>
-														<input
-															class="custom-control-input"
-															type="checkbox"
-															id="televisionCheckbox"
-															value="option1"
-														/>
-														<label
-															for="televisionCheckbox"
-															class="custom-control-label"
-															>Televisión</label
-														>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!-- /.card-body -->
-									</div>
-
-									<div class="card card-secondary">
-										<div class="card-header">
-											<h3 class="card-title">
-												Contrato
-											</h3>
-										</div>
-										<!-- /.card-header -->
-										<!-- form start -->
-
-										<div class="card-body">
-											<div class="row">
-												<div
-													class="col-sm-7"
-												>
-													<label
-														>Tipo</label
-													>
 													<div
 														class="row"
 													>
 														<div
 															class="col-sm-6"
 														>
-															<div
-																class="custom-control custom-radio"
+															<label
+																>Propietario</label
 															>
-																<input
-																	class="custom-control-input"
-																	type="radio"
-																	id="ventaRadio"
-																	name="tipoDeContratoRadio"
-																	checked
-																/>
-																<label
-																	for="ventaRadio"
-																	class="custom-control-label"
-																	>Venta</label
+															<select
+																class="form-control select2"
+																style="
+																	width: 100%;
+																"
+																name="id_cliente_propietario"
+															>
+																<%
+																customers.forEach(function(customer)
+																{
+																%>
+
+																<option
+																	value="<%= customer.id_cliente%>"
 																>
-															</div>
+																	<%=
+																	customer.nombre_apellido
+																	%>
+																</option>
+
+																<%
+																});
+																%>
+															</select>
 														</div>
 														<div
 															class="col-sm-6"
 														>
-															<div
-																class="custom-control custom-radio"
+															<label
+																>Tipo</label
 															>
-																<input
-																	class="custom-control-input"
-																	type="radio"
-																	id="alquilerRadio"
-																	name="tipoDeContratoRadio"
-																/>
-																<label
-																	for="alquilerRadio"
-																	class="custom-control-label"
-																	>Alquiler</label
-																>
-															</div>
+															<select
+																class="form-control select2"
+																style="
+																	width: 100%;
+																"
+															>
+																<option>
+																	Casa
+																</option>
+																<option>
+																	Local
+																</option>
+																<option>
+																	Casa
+																	con
+																	local
+																</option>
+																<option>
+																	Departamento
+																</option>
+																<option>
+																	Chalet
+																</option>
+																<option>
+																	Cabaña
+																</option>
+																<option>
+																	Cochera
+																</option>
+															</select>
 														</div>
 													</div>
 												</div>
 												<div
-													class="col-sm-5"
+													class="form-group"
 												>
 													<label
-														>Precio</label
+														>Descripción
+														breve</label
 													>
+													<textarea
+														class="form-control"
+														rows="2"
+														placeholder="Ingrese ..."
+													></textarea>
+												</div>
+												<label
+													>Descripción
+													detallada</label
+												>
+												<textarea
+													class="form-control"
+													rows="10"
+													placeholder="Ingrese ..."
+												></textarea>
+											</div>
+											<!-- /.card-body -->
+										</div>
+
+										<div
+											class="card card-secondary"
+										>
+											<div class="card-header">
+												<h3
+													class="card-title"
+												>
+													Servicios
+												</h3>
+											</div>
+											<!-- /.card-header -->
+											<!-- form start -->
+
+											<div class="card-body">
+												<div class="row">
 													<div
-														class="input-group"
+														class="col-sm-4"
 													>
 														<div
-															class="input-group-prepend"
+															class="custom-control custom-checkbox"
 														>
-															<span
-																class="input-group-text"
-																>$</span
+															<input
+																class="custom-control-input"
+																type="checkbox"
+																id="luzCheckbox"
+																value="option1"
+															/>
+															<label
+																for="luzCheckbox"
+																class="custom-control-label"
+																>Luz</label
 															>
 														</div>
+													</div>
+													<div
+														class="col-sm-4"
+													>
+														<div
+															class="custom-control custom-checkbox"
+														>
+															<input
+																class="custom-control-input"
+																type="checkbox"
+																id="aguaCheckbox"
+																value="option1"
+															/>
+															<label
+																for="aguaCheckbox"
+																class="custom-control-label"
+																>Agua</label
+															>
+														</div>
+													</div>
+													<div
+														class="col-sm-4"
+													>
+														<div
+															class="custom-control custom-checkbox"
+														>
+															<input
+																class="custom-control-input"
+																type="checkbox"
+																id="gasCheckbox"
+																value="option1"
+															/>
+															<label
+																for="gasCheckbox"
+																class="custom-control-label"
+																>Gas</label
+															>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div
+														class="col-sm-4"
+													>
+														<div
+															class="custom-control custom-checkbox"
+														>
+															<input
+																class="custom-control-input"
+																type="checkbox"
+																id="internetCheckbox"
+																value="option1"
+															/>
+															<label
+																for="internetCheckbox"
+																class="custom-control-label"
+																>Internet</label
+															>
+														</div>
+													</div>
+													<div
+														class="col-sm-4"
+													>
+														<div
+															class="custom-control custom-checkbox"
+														>
+															<input
+																class="custom-control-input"
+																type="checkbox"
+																id="televisionCheckbox"
+																value="option1"
+															/>
+															<label
+																for="televisionCheckbox"
+																class="custom-control-label"
+																>Televisión</label
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- /.card-body -->
+										</div>
+
+										<div
+											class="card card-secondary"
+										>
+											<div class="card-header">
+												<h3
+													class="card-title"
+												>
+													Contrato
+												</h3>
+											</div>
+											<!-- /.card-header -->
+											<!-- form start -->
+
+											<div class="card-body">
+												<div class="row">
+													<div
+														class="col-sm-7"
+													>
+														<label
+															>Tipo</label
+														>
+														<div
+															class="row"
+														>
+															<div
+																class="col-sm-6"
+															>
+																<div
+																	class="custom-control custom-radio"
+																>
+																	<input
+																		class="custom-control-input"
+																		type="radio"
+																		id="ventaRadio"
+																		name="tipoDeContratoRadio"
+																		checked
+																	/>
+																	<label
+																		for="ventaRadio"
+																		class="custom-control-label"
+																		>Venta</label
+																	>
+																</div>
+															</div>
+															<div
+																class="col-sm-6"
+															>
+																<div
+																	class="custom-control custom-radio"
+																>
+																	<input
+																		class="custom-control-input"
+																		type="radio"
+																		id="alquilerRadio"
+																		name="tipoDeContratoRadio"
+																	/>
+																	<label
+																		for="alquilerRadio"
+																		class="custom-control-label"
+																		>Alquiler</label
+																	>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div
+														class="col-sm-5"
+													>
+														<label
+															>Precio</label
+														>
+														<div
+															class="input-group"
+														>
+															<div
+																class="input-group-prepend"
+															>
+																<span
+																	class="input-group-text"
+																	>$</span
+																>
+															</div>
+															<input
+																type="number"
+																step="any"
+																class="form-control"
+															/>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- /.card-body -->
+										</div>
+									</div>
+									<!--/.col (left) -->
+									<!-- right column -->
+									<div class="col-md-6">
+										<!-- Form Element sizes -->
+										<div
+											class="card card-secondary"
+										>
+											<div class="card-header">
+												<h3
+													class="card-title"
+												>
+													Ubicación
+												</h3>
+											</div>
+											<!-- /.card-header -->
+											<!-- form start -->
+
+											<div class="card-body">
+												<div
+													class="form-group"
+												>
+													<label
+														>Provincia</label
+													>
+													<select
+														class="form-control select2"
+														style="
+															width: 100%;
+														"
+														name="id_provincia"
+													>
+														<%
+														provinces.forEach(function(province)
+														{ %>
+														<option
+															value="<%= province.id_provincia %>"
+														>
+															<%=
+															province.nombre
+															%>
+														</option>
+														<% }); %>
+													</select>
+												</div>
+												<div
+													class="form-group"
+												>
+													<label
+														>Ciudad</label
+													>
+													<select
+														class="form-control select2"
+														style="
+															width: 100%;
+														"
+														name="id_localidad"
+													>
+														<%
+														cities.forEach(function(city)
+														{ %>
+														<option
+															value="<%= city.id_localidad%>"
+														>
+															<%=
+															city.nombre
+															%>
+														</option>
+														<% }); %>
+													</select>
+												</div>
+												<div class="row">
+													<div
+														class="col-sm-8"
+													>
+														<label
+															for="calleInput"
+															>Calle</label
+														>
+														<input
+															class="form-control"
+															id="calleInput"
+															placeholder="Ingrese ..."
+														/>
+													</div>
+													<div
+														class="col-sm-4"
+													>
+														<label
+															for="alturaInput"
+															>Altura</label
+														>
 														<input
 															type="number"
-															step="any"
 															class="form-control"
+															id="alturaInput"
+															placeholder="Ingrese ..."
 														/>
 													</div>
 												</div>
 											</div>
+											<!-- /.card-body -->
 										</div>
-										<!-- /.card-body -->
+
+										<div
+											class="card card-secondary"
+										>
+											<div class="card-header">
+												<h3
+													class="card-title"
+												>
+													Ambientes
+												</h3>
+											</div>
+											<!-- /.card-header -->
+											<!-- form start -->
+
+											<div
+												class="card-body"
+												id="cardAmbientes"
+											>
+												<div
+													class="form-group"
+												>
+													<div
+														class="form-group"
+													>
+														<label
+															>Agregar
+															ambiente</label
+														>
+														<select
+															class="select2 agregarAmbiente"
+															style="
+																width: 100%;
+															"
+														>
+															<option>
+																_
+															</option>
+															<option
+																value="0"
+															>
+																Dormitorio
+															</option>
+															<option
+																value="1"
+															>
+																Cochera
+															</option>
+															<option
+																value="2"
+															>
+																Cocina
+															</option>
+															<option
+																value="3"
+															>
+																Comedor
+															</option>
+															<option
+																value="4"
+															>
+																Baño
+															</option>
+															<option
+																value="5"
+															>
+																Estar
+															</option>
+															<option
+																value="6"
+															>
+																Ante
+																baño
+															</option>
+															<option
+																value="7"
+															>
+																Patio
+															</option>
+															<option
+																value="8"
+															>
+																Quincho
+															</option>
+															<option
+																value="9"
+															>
+																Patio
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<!-- /.card-body -->
+										</div>
 									</div>
 									<button
 										type="submit"
@@ -559,171 +777,6 @@
 										Enviar formulario
 									</button>
 								</form>
-							</div>
-							<!--/.col (left) -->
-							<!-- right column -->
-							<div class="col-md-6">
-								<!-- Form Element sizes -->
-								<div class="card card-secondary">
-									<div class="card-header">
-										<h3 class="card-title">
-											Ubicación
-										</h3>
-									</div>
-									<!-- /.card-header -->
-									<!-- form start -->
-
-									<div class="card-body">
-										<div class="form-group">
-											<label>Provincia</label>
-											<select
-												class="form-control select2"
-												style="width: 100%"
-												name="id_provincia"
-											>
-												<%
-												provinces.forEach(function(province)
-												{ %>
-												<p>
-													<%=
-													province.nombre
-													%>
-												</p>
-												<% }); %>
-											</select>
-										</div>
-										<div class="form-group">
-											<label>Ciudad</label>
-											<select
-												class="form-control select2"
-												style="width: 100%"
-												name="id_localidad"
-											>
-												<%
-												cities.forEach(function(city)
-												{ %>
-												<option
-													value="<%= city.id_localidad%>"
-												>
-													<%= city.nombre
-													%>
-												</option>
-												<% }); %>
-											</select>
-										</div>
-										<div class="row">
-											<div class="col-sm-8">
-												<label
-													for="calleInput"
-													>Calle</label
-												>
-												<input
-													class="form-control"
-													id="calleInput"
-													placeholder="Ingrese ..."
-												/>
-											</div>
-											<div class="col-sm-4">
-												<label
-													for="alturaInput"
-													>Altura</label
-												>
-												<input
-													type="number"
-													class="form-control"
-													id="alturaInput"
-													placeholder="Ingrese ..."
-												/>
-											</div>
-										</div>
-									</div>
-									<!-- /.card-body -->
-								</div>
-
-								<div class="card card-secondary">
-									<div class="card-header">
-										<h3 class="card-title">
-											Ambientes
-										</h3>
-									</div>
-									<!-- /.card-header -->
-									<!-- form start -->
-
-									<div
-										class="card-body"
-										id="cardAmbientes"
-									>
-										<div class="form-group">
-											<div class="form-group">
-												<label
-													>Agregar
-													ambiente</label
-												>
-												<select
-													class="select2 agregarAmbiente"
-													style="
-														width: 100%;
-													"
-												>
-													<option>
-														_
-													</option>
-													<option
-														value="0"
-													>
-														Dormitorio
-													</option>
-													<option
-														value="1"
-													>
-														Cochera
-													</option>
-													<option
-														value="2"
-													>
-														Cocina
-													</option>
-													<option
-														value="3"
-													>
-														Comedor
-													</option>
-													<option
-														value="4"
-													>
-														Baño
-													</option>
-													<option
-														value="5"
-													>
-														Estar
-													</option>
-													<option
-														value="6"
-													>
-														Ante baño
-													</option>
-													<option
-														value="7"
-													>
-														Patio
-													</option>
-													<option
-														value="8"
-													>
-														Quincho
-													</option>
-													<option
-														value="9"
-													>
-														Patio
-													</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<!-- /.card-body -->
-								</div>
 							</div>
 							<!--/.col (right) -->
 						</div>
