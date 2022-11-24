@@ -11,7 +11,6 @@ export const createRealEstates = async (req, res, fields) => {
 		provinces: await getProvinces(),
 		cities: await getCities(),
 		realestates_types: await getTypes(),
-		environments: await getEnvironments(),
 	});
 };
 
