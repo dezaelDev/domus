@@ -11,7 +11,5 @@ export const getCustomers = async (req, res, fields) => {
 			.query(`SELECT * FROM ${$tableName}`);
 
 		return result.recordset;
-	} catch (error) {
-		return error;
-	}
+	} catch (error) {}
 };

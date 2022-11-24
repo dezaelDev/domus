@@ -52,7 +52,8 @@
 												style="width: 100%"
 												name="id_cliente_propietario"
 											>
-												<%
+												<% if(customers !=
+												null){ %> <%
 												customers.forEach(function(customer)
 												{ %>
 
@@ -64,7 +65,7 @@
 													%>
 												</option>
 
-												<% }); %>
+												<% }); %> <% } %>
 											</select>
 										</div>
 										<div class="col-sm-6">
@@ -74,7 +75,8 @@
 												style="width: 100%"
 												name="id_tipo_propiedad"
 											>
-												<%
+												<%if(realestates_types
+												!= null) { %> <%
 												realestates_types.forEach(function(type)
 												{ %>
 
@@ -85,7 +87,7 @@
 													%>
 												</option>
 
-												<% }); %>
+												<% }); %> <% } %>
 											</select>
 										</div>
 									</div>
@@ -292,7 +294,7 @@
 										style="width: 100%"
 										name="id_provincia"
 									>
-										<%
+										<%if(provinces != null){ %> <%
 										provinces.forEach(function(province)
 										{ %>
 										<option
@@ -300,7 +302,7 @@
 										>
 											<%= province.nombre %>
 										</option>
-										<% }); %>
+										<% }); %> <%} %>
 									</select>
 								</div>
 								<div class="form-group">
@@ -310,7 +312,7 @@
 										style="width: 100%"
 										name="id_localidad"
 									>
-										<%
+										<%if(cities != null){ %> <%
 										cities.forEach(function(city)
 										{ %>
 										<option
@@ -318,7 +320,7 @@
 										>
 											<%= city.nombre %>
 										</option>
-										<% }); %>
+										<% }); %> <%}%>
 									</select>
 								</div>
 								<div class="row">

@@ -11,7 +11,5 @@ export const getProvinces = async () => {
 			.query(`SELECT * FROM ${$tableName}`);
 
 		return result.recordset;
-	} catch (error) {
-		return error;
-	}
+	} catch (error) {}
 };
