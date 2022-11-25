@@ -4,6 +4,7 @@ import { getProvinces } from '../models/province';
 import { getCities } from '../models/city';
 import { getTypes } from '../models/realestate_types';
 import { getEnvironments } from '../models/environment';
+import { createRealEstate } from '../models/realestate';
 
 export const getRealestates = async (req, res, fields) => {
 	res.render('partials/realestate/agente_catalogo');
@@ -19,12 +20,7 @@ export const createRealEstates = async (req, res, fields) => {
 };
 
 export const storeRealEstates = async (req, res) => {
-	let fields = '';
-	let values = '';
-
-	Object.keys(req.body).map(function (key, index) {
-		console.log(key);
-	});
+	await createRealEstate(req.body);
 
 	res.send(req.body);
 };
