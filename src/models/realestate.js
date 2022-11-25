@@ -30,11 +30,15 @@ const fillable = [
 ];
 
 export const getRealEstates = async () => {
-	const pool = await connection();
+	try {
+		const pool = await connection();
 
-	const result = await pool.request().query(`SELECT * FROM ${tableName}`);
+		const result = await pool
+			.request()
+			.query(`SELECT * FROM ${tableName}`);
 
-	return result.recordset;
+		return result.recordset;
+	} catch (error) {}
 };
 
 /**
