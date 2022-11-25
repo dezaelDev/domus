@@ -1,0 +1,82 @@
+<div class="col-md-4 mt-4">
+	<div class="card">
+		<img
+			src="../dist/img/images/estate_02.jpg"
+			class="card-img-top"
+			alt="..."
+		/>
+		<div class="card-body">
+			<h5 class="card-title">
+				Propiedad <%=realestate.codigo_propiedad %>
+			</h5>
+			<p class="card-text"><%= realestate.descripcion_breve %></p>
+
+			<%- include('btn-available',{
+			codigo_propiedad:realestate.codigo_propiedad,
+			disponibilidad:realestate.disponibilidad }) %>
+		</div>
+		<!--Boton-->
+
+		<!--Boton-->
+		<!--EXPANDABLE-->
+		<div class="col-md-12">
+			<div class="card card-primary collapsed-card">
+				<div class="card-header">
+					<h3 class="card-title">Más Información</h3>
+					<div class="card-tools">
+						<button
+							type="button"
+							class="btn btn-tool"
+							data-card-widget="collapse"
+						>
+							<i class="fas fa-plus"></i>
+						</button>
+					</div>
+					<!-- /.card-tools -->
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body">
+					<label
+						>Código: <%= realestate.codigo_propiedad %> </label
+					><br />
+					<label>Tipo:<%= realestate.id_tipo_propiedad %> </label
+					><br />
+					<label>Precio: <%= realestate.precio_inmueble %></label
+					><br />
+					<!--Provincia, ciudad-->
+					<label>Ubicación: </label><br />
+					<!--Calle,altura, piso, departamento -->
+					<label>Dirección: </label><br />
+					<!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
+					<label>Nombre_Ambiente: </label><br />
+					<label><li>Superficie del Ambiente: m²</li></label
+					><br />
+					<!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
+					<label>Fecha de Construcción: </label><br />
+					<label>Superficie Total: m²</label><br />
+					<label>Superficie Cubierta: m²</label><br />
+					<label>Servicios Adheridos: </label><br />
+					<label>Cantidad Artefactos: </label><br />
+					<label
+						>Descripción Detallada:
+						<p>
+							<small class="text-muted"
+								>Lorem, ipsum dolor sit amet consectetur
+								adipisicing elit. Ullam, cum repellat
+								error nulla
+							</small>
+						</p>
+					</label>
+				</div>
+				<!-- /.card-body -->
+			</div>
+			<!-- /.card -->
+			<!-- CARD FOOTER -->
+			<div class="card-footer">
+				<small class="text-muted">Fecha Publicación: </small>
+			</div>
+			<!-- CARD FOOTER -->
+		</div>
+		<!--EXPANDABLE-->
+	</div>
+</div>

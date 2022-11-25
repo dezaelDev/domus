@@ -1,10 +1,14 @@
 import { Router } from 'express';
-import { createRealEstates, getRealestates, storeRealEstates } from '../controllers/realestate';
+import {
+	createRealEstates,
+	indexRealEstates,
+	storeRealEstates,
+} from '../controllers/realestate';
 
 const router = Router();
 
 //OBTENER TODAS LAS PROPIEDADS
-router.get('/catalogue', getRealestates);
+router.get('/catalogue', indexRealEstates);
 
 //CARGAR UNA PROPIEDAD
 router.post('/create', storeRealEstates);

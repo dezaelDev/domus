@@ -4,10 +4,12 @@ import { getProvinces } from '../models/province';
 import { getCities } from '../models/city';
 import { getTypes } from '../models/realestate_types';
 import { getEnvironments } from '../models/environment';
-import { createRealEstate } from '../models/realestate';
+import { createRealEstate, getRealEstates } from '../models/realestate';
 
-export const getRealestates = async (req, res, fields) => {
-	res.render('partials/realestate/agente_catalogo');
+export const indexRealEstates = async (req, res, fields) => {
+	res.render('partials/realestate/agente_catalogo', {
+		realestates: await getRealEstates(),
+	});
 };
 
 export const createRealEstates = async (req, res, fields) => {

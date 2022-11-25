@@ -6,39 +6,39 @@
 
 <li class="nav-item">
 	<a href="./index3.html" class="nav-link">
-	  <i class="fas fa-calendar-alt nav-icon"></i>
-	  <p>Agenda</p>
+		<i class="fas fa-calendar-alt nav-icon"></i>
+		<p>Agenda</p>
 	</a>
-  </li>
-  <li class="nav-item menu-open">
+</li>
+<li class="nav-item menu-open">
 	<a href="#" class="nav-link">
-	  <i class="fas fa-home nav-icon"></i>
-	  <p>
-		Propiedades
-		<i class="right fas fa-angle-left"></i>
-	  </p>
+		<i class="fas fa-home nav-icon"></i>
+		<p>
+			Propiedades
+			<i class="right fas fa-angle-left"></i>
+		</p>
 	</a>
 	<ul class="nav nav-treeview">
-	  <li class="nav-item">
-		<a href="./index2.html" class="nav-link">
-		  <i class="fas fa-th nav-icon"></i>
-		  <p>Catálogo</p>
-		</a>
-	  </li>
-	  <li class="nav-item">
-		<a href="./index2.html" class="nav-link">
-		  <i class="fas fa-th-list nav-icon"></i>
-		  <p>Lista</p>
-		</a>
-	  </li>
-	  <li class="nav-item">
-		<a href="./index3.html" class="nav-link active">
-		  <i class="fas fa-plus nav-icon"></i>
-		  <p>Nueva Propiedad</p>
-		</a>
-	  </li>
+		<li class="nav-item">
+			<a href="./index2.html" class="nav-link">
+				<i class="fas fa-th nav-icon"></i>
+				<p>Catálogo</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="./index2.html" class="nav-link">
+				<i class="fas fa-th-list nav-icon"></i>
+				<p>Lista</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="./index3.html" class="nav-link active">
+				<i class="fas fa-plus nav-icon"></i>
+				<p>Nueva Propiedad</p>
+			</a>
+		</li>
 	</ul>
-  </li>
+</li>
 
 <%+ endSection %>
 <!-- -->
@@ -46,585 +46,41 @@
 <%+ section('body') %>
 <!---->
 
-      <!--CATALOGO-->
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper" style="min-height: 2500px;">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-          <div class="container-fluid">
-            <div class="row mb-2">
-              <div class="col-sm-6">
-                <h1 class="m-0">Catálogo de Propiedades</h1>
-              </div>
-          
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+<!--CATALOGO-->
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" style="min-height: 2500px">
+	<!-- Content Header (Page header) -->
+	<div class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1 class="m-0">Catálogo de Propiedades</h1>
+				</div>
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /.content-header -->
 
-        <!-- Main content -->
-        <section class="content">
-              <!-- Contenedor de Tags de Propiedades -->
-              <div class="container" style="max-width: 1000px;">
-                    <!--elemento a posicionar-->
-                    <!--CARDS-->
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/estate_01.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 1</h5>
-                            <p class="card-text">Construida en 2016. Country privado "Montes de Oca Club". El jardín completamente parquizado con riego por aspersores</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-success" style="width: 130px; cursor: auto; margin-top: 110px;"  type="button"> Disponible </button>
-                         </div>
-                         <br> 
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                      <!--CARD 2-->
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/estate_02.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 2</h5>
-                            <p class="card-text">Construida en 2021. Ubicado en el prestigioso barrio Los Alerces. El jardín, muy amplio, esta totalmente parquizado con riego automático. Cochera semicubierta.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-danger" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> No Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/estate_03.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 3</h5>
-                            <p class="card-text">Construida en 1991. Ubicado en el prestigioso barrio Del Sur. Gran piscina con solarium, amplia galería con living y un área de comedor con parrilla.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-danger" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> No Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_01.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 4</h5>
-                            <p class="card-text">Construida en 1990. En PB, gran hall de entrada, amplio y luminoso living con hogar, comedor principal, ambos con vista y salida al parque.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-danger" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> No Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_03.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 5</h5>
-                            <p class="card-text">Construida en 2007. A 5 cuadras del centro comercial. En el exterior se encuentra el sector de parrilla. El jardín esta totalmente parquizado, con riego.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-success" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                          <!-- CARD DESPLEGABLE -->
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_04.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 6</h5>
-                            <p class="card-text">Construida en 2018. Importante propiedad desarrollada en dos plantas con revestimiento exterior en ladrillo a la vista, techos en teja, pisos en madera, cerámicos y porcelanato.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-success" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> Disponible </button>
-                         </div>
-                         <br> 
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_08.jpeg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 7</h5>
-                            <p class="card-text">Construida en 2012. Ubicado en zona norte. Excelente casa estilo Colonial, distribuida en tres niveles, dentro del Barrio cerrado Highland Park C.C.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-success" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                          <!-- CARD DESPLEGABLE -->
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_09.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 8</h5>
-                            <p class="card-text">Construida en 2019. El barrio esta próximo a la panamericana con excelente acceso, y galerías comerciales, restaurantes y otros servicios.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-danger" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> No Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="card h-100">
-                          <img src="../dist/img/images/home_10.jpg" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title">Propiedad 9</h5>
-                            <p class="card-text">Construida en 2021. Los Sauces Barrio Cerrado. Ubicado en Pilar, frente a un parque de 10Ha.Impecable, a estrenar.</p>
-                          </div>
-                          <br>
-                          <!--Boton-->
-                          <div class="col text">
-                            <button class="btn btn-success" style="width: 130px; cursor: auto; margin-top: 110px;" type="button"> Disponible </button>
-                         </div> 
-                         <br>
-                         <!--Boton-->
-                          <!--EXPANDABLE-->
-                         <div class="col-md-12">
-                          <div class="card card-primary collapsed-card">
-                            <div class="card-header">
-                              <h3 class="card-title">Más Información</h3>
-                              <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
-                                </button>
-                              </div>
-                              <!-- /.card-tools -->
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                              <label>Código: </label><br>
-                              <label>Tipo: </label><br>
-                              <label>Precio: </label><br>
-                              <!--Provincia, ciudad-->
-                              <label>Ubicación: </label><br>
-                              <!--Calle,altura, piso, departamento -->
-                              <label>Dirección: </label><br>
-                              <!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Nombre_Ambiente: </label><br>
-                              <label><li>Superficie del Ambiente:  m²</li></label><br>
-                              <!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-                              <label>Fecha de Construcción: </label><br>
-                              <label>Superficie Total:  m²</label><br>
-                              <label>Superficie Cubierta:  m²</label><br>
-                              <label>Servicios Adheridos: </label><br>
-                              <label>Cantidad Artefactos: </label><br>
-                              <label>Descripción Detallada: 
-                              <p><small class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, cum repellat error nulla
-                              </small></p>
-                              </label>
-                            </div>
-                            <!-- /.card-body -->
-                          </div>
-                          <!-- /.card -->
-                          <!-- CARD FOOTER -->
-                          <div class="card-footer">
-                            <small class="text-muted">Fecha Publicación: </small>
-                          </div>
-                          <!-- CARD FOOTER -->
-                        </div>
-                         <!--EXPANDABLE-->
-                        </div>
-                      </div>
-                    </div>
-                    <!--CARDS-->
-                
-            </div>
-        </section>
-        <!-- /.content -->
-      </div>
+	<!-- Main content -->
+	<section class="content">
+		<!-- Contenedor de Tags de Propiedades -->
+		<div class="container" style="max-width: 1000px">
+			<!--elemento a posicionar-->
+			<!--CARDS-->
+			<div class="row">
+				<!--CARDS ROWS -->
+
+				<% realestates.forEach(function (realestate){%> <%-
+				include('../partials/components/catalog/realestate_card',{
+				realestate:realestate }) %> <%})%>
+			</div>
+
+			<!--CARDS-->
+		</div>
+	</section>
+	<!-- /.content -->
+</div>
 
 <%+ endSection %>
