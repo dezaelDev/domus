@@ -41,29 +41,46 @@
 					><br />
 					<label>Tipo:<%= realestate.id_tipo_propiedad %> </label
 					><br />
-					<label>Precio: <%= realestate.precio_inmueble %></label
+					<label
+						>Precio: $<%= realestate.precio_inmueble %></label
 					><br />
 					<!--Provincia, ciudad-->
-					<label>Ubicación: </label><br />
+					<label
+						>Ubicación: provincia<%= realestate.id_provincia
+						%> localidad<%= realestate.id_localidad %></label
+					><br />
 					<!--Calle,altura, piso, departamento -->
-					<label>Dirección: </label><br />
+					<label
+						>Dirección:<%= realestate.calle %> <%=
+						realestate.altura %> </label
+					><br />
 					<!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-					<label>Nombre_Ambiente: </label><br />
-					<label><li>Superficie del Ambiente: m²</li></label
+
 					><br />
 					<!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
-					<label>Fecha de Construcción: </label><br />
-					<label>Superficie Total: m²</label><br />
-					<label>Superficie Cubierta: m²</label><br />
-					<label>Servicios Adheridos: </label><br />
-					<label>Cantidad Artefactos: </label><br />
+					<label
+						>Fecha de Construcción:<%=
+						realestate.fecha_construccion %> </label
+					><br />
+					<label
+						>Superficie Total: <%= realestate.superficie_total
+						%>m²</label
+					><br />
+					<label
+						>Superficie Cubierta:<%=
+						realestate.superficie_cubierta %> m²</label
+					><br />
+					<!--SERVICIOS ADHERIDOS AQUI-->
+
+					<label
+						>Cantidad Artefactos:<%=
+						realestate.cant_artefactos %> </label
+					><br />
 					<label
 						>Descripción Detallada:
 						<p>
 							<small class="text-muted"
-								>Lorem, ipsum dolor sit amet consectetur
-								adipisicing elit. Ullam, cum repellat
-								error nulla
+								><%= realestate.descripcion_detallada %>
 							</small>
 						</p>
 					</label>
@@ -73,7 +90,10 @@
 			<!-- /.card -->
 			<!-- CARD FOOTER -->
 			<div class="card-footer">
-				<small class="text-muted">Fecha Publicación: </small>
+				<small class="text-muted"
+					>Fecha Publicación: <%= realestate.fecha_publicacion
+					%></small
+				>
 			</div>
 			<!-- CARD FOOTER -->
 		</div>
