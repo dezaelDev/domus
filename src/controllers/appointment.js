@@ -5,6 +5,9 @@ export const getAgentActivities = async (req, res) => {
 }
 
 export const getSecretaryActivities = async (req, res) => {
-    res.render('partials/appointment/secretaria_actividades')
-  }
-  
+  res.render('partials/appointment/secretaria_actividades')
+}
+
+export const createAppointment = async (req, res) => {
+  res.render('partials/appointment/secretaria_agendarCita')
+}

@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getAgentActivities, getSecretaryActivities } from '../controllers/appointment';
+import { createAppointment, getAgentActivities, getSecretaryActivities } from '../controllers/appointment';
 
 const router = Router();
 
@@ -8,5 +8,8 @@ router.get('/agent-activities', getAgentActivities)
 
 //ACTIVIDADES DE LA SECRETARIA
 router.get('/secretary-activities', getSecretaryActivities)
+
+//FORMULARIO PARA AGENDAR UNA CITA
+router.get('/create', createAppointment)
 
 export default router;

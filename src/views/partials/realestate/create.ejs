@@ -26,12 +26,6 @@
 		</a>
 	  </li>
 	  <li class="nav-item">
-		<a href="./index2.html" class="nav-link">
-		  <i class="fas fa-th-list nav-icon"></i>
-		  <p>Lista</p>
-		</a>
-	  </li>
-	  <li class="nav-item">
 		<a href="./index3.html" class="nav-link active">
 		  <i class="fas fa-plus nav-icon"></i>
 		  <p>Nueva Propiedad</p>
@@ -89,6 +83,7 @@
 												class="form-control select2"
 												style="width: 100%"
 												name="id_cliente_propietario"
+												required
 											>
 												<% if(customers !=
 												null){ %> <%
@@ -112,6 +107,7 @@
 												class="form-control select2"
 												style="width: 100%"
 												name="id_tipo_propiedad"
+												required
 											>
 												<%if(realestates_types
 												!= null) { %> <%
@@ -137,6 +133,8 @@
 										rows="2"
 										placeholder="Ingrese ..."
 										name="descripcion_breve"
+										required
+										maxlength="128"
 									></textarea>
 								</div>
 								<div class="form-group">
@@ -160,6 +158,7 @@
 									  id="superficie_total"
 									  placeholder="Ingrese ..."
 									  name="superficie_total"
+									  required
 									/>
 								  </div>
 
@@ -172,6 +171,7 @@
 									  id="superficie_cubierta"
 									  placeholder="Ingrese ..."
 									  name="superficie_cubierta"
+									  required
 									/>
 								  </div>
 								</div>
@@ -210,6 +210,7 @@
 									  class="form-control"
 									  id="fecha_construccion"
 									  name="fecha_construccion"
+									  required
 									/>
 								  </div>
 
@@ -221,6 +222,7 @@
 									  id="cant_artefactos"
 									  placeholder="Ingrese ..."
 									  name="cant_artefactos"
+									  required
 									/>
 
 							</div>
@@ -382,6 +384,7 @@
 												step="any"
 												class="form-control"
 												name="precio_inmueble"
+												required
 											/>
 										</div>
 									</div>
@@ -408,6 +411,7 @@
 										class="form-control select2"
 										style="width: 100%"
 										name="id_provincia"
+										required
 									>
 										<%if(provinces != null){ %> <%
 										provinces.forEach(function(province)
@@ -426,6 +430,7 @@
 										class="form-control select2"
 										style="width: 100%"
 										name="id_localidad"
+										required
 									>
 										<%if(cities != null){ %> <%
 										cities.forEach(function(city)
@@ -448,6 +453,7 @@
 											id="calleInput"
 											placeholder="Ingrese ..."
 											name="calle"
+											required
 										/>
 									</div>
 									<div class="col-sm-4">
@@ -460,6 +466,7 @@
 											id="alturaInput"
 											placeholder="Ingrese ..."
 											name="altura"
+											required
 										/>
 									</div>
 								</div>
