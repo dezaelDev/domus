@@ -23,7 +23,6 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.use(express.static(path.join(__dirname + '/public')));
-app.use('/realestates', express.static(path.join(__dirname + '/public')));
 app.set('views', path.join(__dirname + '/views'));
 
 //VIEW ENGINE
@@ -40,5 +39,6 @@ app.use('/admin', express.static(path.join(__dirname + '/public')))
 app.use('/appointment', appointmentRoutes)
 app.use('/appointment', express.static(path.join(__dirname + '/public')))
 app.use('/realestates', realestateRoutes)
+app.use('/realestates', express.static(path.join(__dirname + '/public')))
 
 export default app;
