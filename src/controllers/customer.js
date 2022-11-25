@@ -3,6 +3,10 @@ const Validator = require('Validator');
 
 const $tableName = '[Domus].[dbo].[cliente]';
 
+export const viewLogin = async (req, res) => {
+  res.render('partials/customer/login')
+}
+
 export const getCustomers = async (req, res, fields) => {
 	const pool = await connection();
 

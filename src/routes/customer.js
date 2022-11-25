@@ -3,9 +3,13 @@ import {
   getCustomers,
   viewCreateCorporateCustomer,
   viewCreatePrivateCustomer,
+  viewLogin,
 } from '../controllers/customer'
 
 const router = Router();
+
+//FORMULARIO DE LOGIN
+router.get('/login', viewLogin)
 
 //OBTENER TODOS LOS CLIENTES
 router.get('/', getCustomers)
