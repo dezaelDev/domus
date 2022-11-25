@@ -7,6 +7,8 @@ import path from 'path';
 import customerRoutes from './routes/customer';
 import realestateRoutes from './routes/realestate';
 import testRoutes from './routes/test';
+import adminRoutes from './routes/admin';
+import appointmentRoutes from './routes/appointment';
 
 const app = express();
 
@@ -33,6 +35,10 @@ app.use('/customers', customerRoutes)
 app.use('/customers', express.static(path.join(__dirname + '/public')))
 app.use('/test', testRoutes)
 app.use('/test', express.static(path.join(__dirname + '/public')))
+app.use('/admin', adminRoutes)
+app.use('/admin', express.static(path.join(__dirname + '/public')))
+app.use('/appointment', appointmentRoutes)
+app.use('/appointment', express.static(path.join(__dirname + '/public')))
 app.use('/realestates', realestateRoutes)
 
 export default app;

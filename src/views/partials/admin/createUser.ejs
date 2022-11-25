@@ -1,0 +1,95 @@
+<%+ extend('layouts/index') %>
+<!-- -->
+
+<%+ section('body') %>
+<!-- -->
+
+<%- include('../partials/sidebar/agente'); -%>
+<!-- -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Alta Usuario</h1>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <!--Contenido formulario alta de usuario-->
+      <!-- Main content -->
+      <section class="content">
+        
+            <!-- left column -->
+            
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Datos Empleado</h3>
+                </div>
+                <!--FORMULARIO-->
+                <form>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nombre y Apellido</label>
+                      <input type="text" name="nombre_apellido" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">DNI</label>
+                      <input type="text" name="dni" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Teléfono de Contacto</label>
+                      <input type="text" name="telefono_contacto" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Teléfono Alternativo</label>
+                      <input type="text" name="telefono_alternativo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email</label>
+                      <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Usuario</label>
+                      <input type="text" name="nombre_usuario" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Contraseña</label>
+                      <input type="password" name="contrasenia" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Puesto de Trabajo</label>
+                      <select class="form-control select2" style="width: 100%;" name="puesto_trabajo">
+                        <option selected="selected" name="secretaria">Secretaria</option>
+                        <option selected="selected" name="agente">Agente Inmobiliario</option>
+                        <option disabled="disabled">Marketing (disabled)</option>
+                        <option>Cajera</option>
+                        <option>Gerencia</option>
+                        <option>Jefe Comercialización</option>
+                        <option>Jefe Administración</option>
+                      </select>
+                    </div>
+                  <!-- /.card-body -->
+
+                  <div class="card-footer">
+                    <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
+                  </div>
+                </form>
+              </div>
+              <!-- /.card -->
+          </section>
+      <!-- /.content -->
+    <!--FORMULARIO-->
+  </div>
+      
+<%+ endSection %>
