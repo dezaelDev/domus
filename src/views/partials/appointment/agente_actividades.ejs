@@ -1,10 +1,43 @@
 <%+ extend('layouts/index') %>
 <!-- -->
 
-<%+ section('body') %>
+<%+ section('sidebar-menu') %>
 <!-- -->
 
-<%- include('../partials/sidebar/agente'); -%>
+<li class="nav-item">
+	<a href="./index3.html" class="nav-link active">
+	  <i class="fas fa-calendar-alt nav-icon"></i>
+	  <p>Agenda</p>
+	</a>
+</li>
+<li class="nav-item">
+	<a href="#" class="nav-link">
+	  <i class="fas fa-home nav-icon"></i>
+	  <p>
+		Propiedades
+		<i class="right fas fa-angle-left"></i>
+	  </p>
+	</a>
+	<ul class="nav nav-treeview">
+	  <li class="nav-item">
+		<a href="./index2.html" class="nav-link">
+		  <i class="fas fa-th nav-icon"></i>
+		  <p>Catálogo</p>
+		</a>
+	  </li>
+	  <li class="nav-item">
+		<a href="./index3.html" class="nav-link">
+		  <i class="fas fa-plus nav-icon"></i>
+		  <p>Nueva Propiedad</p>
+		</a>
+	  </li>
+	</ul>
+</li>
+
+<%+ endSection %>
+<!-- -->
+
+<%+ section('body') %>
 <!-- -->
 
       <!-- Content Wrapper. Contains page content -->

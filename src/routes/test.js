@@ -21,8 +21,4 @@ router.put('/:id');
 
 router.delete('/:id');
 
-router.get('/cita', async (req, res) => {
-  res.render('partials/test/cita')
-})
-
 export default router;
