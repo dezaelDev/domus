@@ -1,4 +1,4 @@
-import { connection } from '../database/connection';
+import { connection, generateParamsByValues } from '../database/connection';
 const Validator = require('Validator');
 
 const tableName = '[Domus].[dbo].[propiedad]';
@@ -37,29 +37,22 @@ export const getRealEstates = async () => {
 	return result.recordset;
 };
 
+/**
+ *
+ * @param object body contains fields and values of form
+ *
+ * @return int rowsAffected with amount of affected rows
+ */
+
 export const createRealEstate = async (body) => {
 	try {
 		const data = generateQuery(body);
 
-		// console.log(
-		// 	`INSERT INTO ${tableName} (${data.fields}) VALUES (${new Array(
-		// 		data.fields.length
-		// 	).fill('?')})`,
-		// 	data.values
-		// );
-
 		const pool = await connection();
 
-		// const result = await pool
-		// 	.request()
-		// 	.query(
-		// 		`INSERT INTO ${tableName} (${
-		// 			data.fields
-		// 		}) VALUES (${new Array(data.fields.length).fill('?')})`,
-		// 		data.values
-		// 	);
+		// let params = data.values.map((_, i) => `@param_${i}`); //FUNCTION generateParamsByValues
 
-		let params = data.values.map((_, i) => `@param_${i}`);
+		const params = generateParamsByValues(data.values);
 
 		let sqlquery;
 		let request = pool.request();
@@ -69,6 +62,8 @@ export const createRealEstate = async (body) => {
 
 		sqlquery = `INSERT INTO ${tableName}(${data.fields}) values (${params})`;
 
+		console.log(sqlquery);
+
 		const result = await request.query(sqlquery);
 
 		return result.rowsAffected;
@@ -77,6 +72,15 @@ export const createRealEstate = async (body) => {
 	}
 };
 
+/**
+ *
+ * @param object body contains fields and values of form
+ *
+ * @return 	object containing an array of fields and an array of values
+ * 			string object.fields
+ * 			any object.values
+ *
+ */
 const generateQuery = (body) => {
 	let fields = [];
 	let values = [];
@@ -85,8 +89,12 @@ const generateQuery = (body) => {
 		if (!fillable.includes(key)) {
 			delete body.key;
 		} else {
-			fields.push(key);
-			values.push(body[key]);
+			if (body[key] == '' || body[key] == null) {
+				delete body.key;
+			} else {
+				fields.push(key);
+				values.push(body[key]);
+			}
 		}
 	}
 
