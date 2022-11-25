@@ -35,4 +35,9 @@ export async function connection() {
 	}
 }
 
+export const generateParamsByValues = (values) => {
+	const params = values.map((_, i) => `@param_${i}`);
+	return params;
+};
+
 export { sql };
