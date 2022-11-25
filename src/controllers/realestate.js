@@ -6,6 +6,10 @@ import { getTypes } from '../models/realestate_types';
 import { getEnvironments } from '../models/environment';
 import { createRealEstate } from '../models/realestate';
 
+export const getRealestates = async (req, res, fields) => {
+	res.render('partials/realestate/agente_catalogo');
+};
+
 export const createRealEstates = async (req, res, fields) => {
 	res.render('partials/realestate/create', {
 		customers: await getCustomers(),
