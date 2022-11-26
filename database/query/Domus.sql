@@ -22,12 +22,12 @@ SELECT
   P.descripcion_detallada,
   P.fecha_publicacion,
 FROM
-  dbo.propiedad AS P JOIN
-  dbo.tipo_propiedad AS TP ON
+  [Domus].[dbo].propiedad AS P JOIN
+  [Domus].[dbo].tipo_propiedad AS TP ON
   P.id_tipo_propiedad = TP.id_tipo_propiedad JOIN
-  dbo.provincia AS PR ON
+  [Domus].[dbo].provincia AS PR ON
   P.id_provincia = PR.id_provincia JOIN
-  dbo.localidad AS L ON
+  [Domus].[dbo].localidad AS L ON
   P.id_localidad = L.id_localidad;
 
 
@@ -37,7 +37,7 @@ SELECT
   A.nombre,
   A.superficie
 FROM
-  dbo.ambiente AS A
+  [Domus].[dbo].ambiente AS A
 WHERE
   A.codigo_propiedad = ${};
 
@@ -59,24 +59,24 @@ SELECT
   C.estado,
   C.fecha_hs
 FROM
-  dbo.cita AS C JOIN
-  dbo.empleado AS EA ON
+  [Domus].[dbo].cita AS C JOIN
+  [Domus].[dbo].empleado AS EA ON
   C.legajo_agente = EA.legajo JOIN
-  dbo.cliente AS CL ON
+  [Domus].[dbo].cliente AS CL ON
   C.id_cliente = CL.id_cliente JOIN
-  dbo.propiedad AS P ON
+  [Domus].[dbo].propiedad AS P ON
   C.codigo_inmueble = P.codigo_propiedad JOIN
-  dbo.provincia AS PR ON
+  [Domus].[dbo].provincia AS PR ON
   P.id_provincia = PR.id_provincia JOIN
-  dbo.localidad AS L ON
+  [Domus].[dbo].localidad AS L ON
   P.id_localidad = L.id_localidad JOIN
-  dbo.actividad AS A ON
+  [Domus].[dbo].actividad AS A ON
   C.id_actividad = A.id_actividad
 WHERE
   C.fecha_hs = '${}';
 
 
-  
+
 -- Agenda agente
 
 SELECT
@@ -91,18 +91,18 @@ SELECT
   C.estado,
   C.fecha_hs
 FROM
-  dbo.cita AS C JOIN
-  dbo.empleado AS EA ON
+  [Domus].[dbo].cita AS C JOIN
+  [Domus].[dbo].empleado AS EA ON
   C.legajo_agente = EA.legajo JOIN
-  dbo.cliente AS CL ON
+  [Domus].[dbo].cliente AS CL ON
   C.id_cliente = CL.id_cliente JOIN
-  dbo.propiedad AS P ON
+  [Domus].[dbo].propiedad AS P ON
   C.codigo_inmueble = P.codigo_propiedad JOIN
-  dbo.provincia AS PR ON
+  [Domus].[dbo].provincia AS PR ON
   P.id_provincia = PR.id_provincia JOIN
-  dbo.localidad AS L ON
+  [Domus].[dbo].localidad AS L ON
   P.id_localidad = L.id_localidad JOIN
-  dbo.actividad AS A ON
+  [Domus].[dbo].actividad AS A ON
   C.id_actividad = A.id_actividad
 WHERE
   C.legajo_agente = ${} AND
@@ -111,8 +111,8 @@ WHERE
 
 -- Actualizar estado de propiedad
 
-UPDATE 
-  dbo.propiedad
+UPDATE
+  [Domus].[dbo].propiedad
 SET
   estado = NOT ${}
 WHERE
