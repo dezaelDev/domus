@@ -53,3 +53,63 @@ FROM
 		console.log(error);
 	}
 };
+
+export const createRealEstate = async (body) => {
+	try {
+		const data = generateQuery(body);
+
+		const pool = await connection();
+
+		// let params = data.values.map((_, i) => `@param_${i}`); //FUNCTION generateParamsByValues
+
+		const params = generateParamsByValues(data.values);
+
+		let sqlquery;
+		let request = pool.request();
+		for (let i = 0; i < data.values.length; i++) {
+			request.input(`param_${i}`, data.values[i]);
+		}
+
+		sqlquery = `INSERT INTO ${tableName}(${data.fields}) values (${params})`;
+
+		const result = await request.query(sqlquery);
+
+		return result.rowsAffected;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+const generateQuery = (body) => {
+	let fields = [];
+	let values = [];
+
+	for (var key in body) {
+		if (!fillable.includes(key)) {
+			delete body.key;
+		} else {
+			if (body[key] == '' || body[key] == null) {
+				delete body.key;
+			} else {
+				fields.push(key);
+				values.push(body[key]);
+			}
+		}
+	}
+
+	return { fields: fields, values: values };
+};
+
+export const guardar = async (body) => {
+	try {
+		const pool = await connection();
+
+		const result = await pool
+			.request()
+			.input('param1', body.nombre_apellido)
+			.input('param2', body.tipo_empleado)
+			.query(
+				`INSERT INTO [dbo].[empleado] (nombre_apellido,tipo_empleado) values(@param1, @param2)`
+			);
+	} catch (error) {}
+};

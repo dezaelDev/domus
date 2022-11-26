@@ -1,5 +1,9 @@
-import { connection } from '../database/connection';
 import { getAppointments } from '../models/appointment';
+import { getCustomers } from '../models/customer';
+import { getRealEstatesId } from '../models/realestate';
+import { getEmployeesAgent } from '../models/employee';
+import { getActivities } from '../models/motive';
+
 const moment = require('moment');
 
 export const getAgentActivities = async (req, res) => {
@@ -22,5 +26,12 @@ export const getSecretaryActivities = async (req, res) => {
 };
 
 export const createAppointment = async (req, res) => {
-	res.render('partials/appointment/secretaria_agendarCita');
+	res.render('partials/appointment/secretaria_agendarCita', {
+		realestates: await getRealEstatesId(),
+		agents: await getEmployeesAgent(),
+		customers: await getCustomers(),
+		motives: await getActivities(),
+	});
 };
+
+export const storeAppointment = async (req, res) => {};

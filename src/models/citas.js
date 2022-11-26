@@ -1,6 +1,6 @@
 import { connection } from '../database/connection';
 
-const $tableName = '[Domus].[dbo].[cliente]';
+const $tableName = '[Domus].[dbo].[cita]';
 
 export const getCitas = async (req, res, fields) => {
 	const pool = await connection();

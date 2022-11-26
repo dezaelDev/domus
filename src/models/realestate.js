@@ -45,6 +45,20 @@ export const getRealEstates = async () => {
 	} catch (error) {}
 };
 
+export const getRealEstatesId = async () => {
+	try {
+		const pool = await connection();
+
+		const result = await pool
+			.request()
+			.query(
+				`SELECT codigo_propiedad, descripcion_breve FROM ${tableName}`
+			);
+
+		return result.recordset;
+	} catch (error) {}
+};
+
 export const getCatalog = async () => {
 	try {
 		const pool = await connection();
