@@ -99,17 +99,3 @@ const generateQuery = (body) => {
 
 	return { fields: fields, values: values };
 };
-
-export const guardar = async (body) => {
-	try {
-		const pool = await connection();
-
-		const result = await pool
-			.request()
-			.input('param1', body.nombre_apellido)
-			.input('param2', body.tipo_empleado)
-			.query(
-				`INSERT INTO [dbo].[empleado] (nombre_apellido,tipo_empleado) values(@param1, @param2)`
-			);
-	} catch (error) {}
-};
