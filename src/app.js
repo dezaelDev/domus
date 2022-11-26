@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
 	res.send('VERSION 1.0.0');
 });
 app.use('/customers', customerRoutes);
+app.use('/customers', express.static(path.join(__dirname + '/public')));
 
 app.use('/test', testRoutes);
 
