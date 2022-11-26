@@ -40,8 +40,8 @@ app.use('/test', testRoutes);
 app.use('/test', express.static(path.join(__dirname + '/public')));
 app.use('/admin', adminRoutes);
 app.use('/admin', express.static(path.join(__dirname + '/public')));
-app.use('/appointment', appointmentRoutes);
-app.use('/appointment', express.static(path.join(__dirname + '/public')));
+app.use('/appointments', appointmentRoutes);
+app.use('/appointments', express.static(path.join(__dirname + '/public')));
 app.use('/realestates', realestateRoutes);
 app.use('/realestates', express.static(path.join(__dirname + '/public')));
 
