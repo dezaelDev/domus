@@ -110,8 +110,6 @@ export const createRealEstate = async (body) => {
 
 		sqlquery = `INSERT INTO ${tableName}(${data.fields}) values (${params})`;
 
-		console.log(sqlquery);
-
 		const result = await request.query(sqlquery);
 
 		return result.rowsAffected;
@@ -129,6 +127,20 @@ export const setStateById = async (id, state) => {
 			.query(
 				`UPDATE ${tableName} SET disponibilidad = ${state} WHERE codigo_propiedad = ${id}`
 			);
+
+		return result.recordset;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+export const getLatestId = async () => {
+	try {
+		const pool = await connection();
+
+		const result = await pool
+			.request()
+			.query(`SELECT TOP(1) codigo_propiedad FROM ${tableName} `);
 
 		return result.recordset;
 	} catch (error) {

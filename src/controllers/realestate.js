@@ -3,7 +3,7 @@ import { getCustomers } from '../models/customer';
 import { getProvinces } from '../models/province';
 import { getCities } from '../models/city';
 import { getTypes } from '../models/realestate_types';
-import { getEnvironments } from '../models/environment';
+import { createEnvironments, getEnvironments } from '../models/environment';
 import {
 	createRealEstate,
 	getCatalog,
@@ -28,6 +28,8 @@ export const createRealEstates = async (req, res, fields) => {
 
 export const storeRealEstates = async (req, res) => {
 	await createRealEstate(req.body);
+
+	await createEnvironments(req.body);
 
 	res.send(req.body);
 };

@@ -6,33 +6,33 @@
 
 <li class="nav-item">
 	<a href="../appointments/agent-activities" class="nav-link">
-	  <i class="fas fa-calendar-alt nav-icon"></i>
-	  <p>Agenda</p>
+		<i class="fas fa-calendar-alt nav-icon"></i>
+		<p>Agenda</p>
 	</a>
-  </li>
-  <li class="nav-item menu-open">
+</li>
+<li class="nav-item menu-open">
 	<a href="#" class="nav-link">
-	  <i class="fas fa-home nav-icon"></i>
-	  <p>
-		Propiedades
-		<i class="right fas fa-angle-left"></i>
-	  </p>
+		<i class="fas fa-home nav-icon"></i>
+		<p>
+			Propiedades
+			<i class="right fas fa-angle-left"></i>
+		</p>
 	</a>
 	<ul class="nav nav-treeview">
-	  <li class="nav-item">
-		<a href="./catalogue" class="nav-link">
-		  <i class="fas fa-th nav-icon"></i>
-		  <p>Catálogo</p>
-		</a>
-	  </li>
-	  <li class="nav-item">
-		<a href="#" class="nav-link active">
-		  <i class="fas fa-plus nav-icon"></i>
-		  <p>Nueva Propiedad</p>
-		</a>
-	  </li>
+		<li class="nav-item">
+			<a href="./catalogue" class="nav-link">
+				<i class="fas fa-th nav-icon"></i>
+				<p>Catálogo</p>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link active">
+				<i class="fas fa-plus nav-icon"></i>
+				<p>Nueva Propiedad</p>
+			</a>
+		</li>
 	</ul>
-  </li>
+</li>
 
 <%+ endSection %>
 <!-- -->
@@ -138,93 +138,109 @@
 									></textarea>
 								</div>
 								<div class="form-group">
-								<label>Descripción detallada</label>
-								<textarea
-									class="form-control"
-									rows="10"
-									placeholder="Ingrese ..."
-									name="descripcion_detallada"
-								></textarea>
+									<label
+										>Descripción detallada</label
+									>
+									<textarea
+										class="form-control"
+										rows="10"
+										placeholder="Ingrese ..."
+										name="descripcion_detallada"
+									></textarea>
 								</div>
 
 								<div class="form-group">
 									<div class="row">
 										<div class="col-sm-6">
-									<label for="superficie_total">Superficie total</label>
-									<input
-									  type="number"
-									  step="any"
-									  class="form-control"
-									  id="superficie_total"
-									  placeholder="Ingrese ..."
-									  name="superficie_total"
-									  required
-									/>
-								  </div>
+											<label
+												for="superficie_total"
+												>Superficie
+												total</label
+											>
+											<input
+												type="number"
+												step="any"
+												class="form-control"
+												id="superficie_total"
+												placeholder="Ingrese ..."
+												name="superficie_total"
+												required
+											/>
+										</div>
 
-								  <div class="col-sm-6">
-									<label for="superficie_cubierta">Superficie cubierta</label>
-									<input
-									  type="number"
-									  step="any"
-									  class="form-control"
-									  id="superficie_cubierta"
-									  placeholder="Ingrese ..."
-									  name="superficie_cubierta"
-									  required
-									/>
-								  </div>
+										<div class="col-sm-6">
+											<label
+												for="superficie_cubierta"
+												>Superficie
+												cubierta</label
+											>
+											<input
+												type="number"
+												step="any"
+												class="form-control"
+												id="superficie_cubierta"
+												placeholder="Ingrese ..."
+												name="superficie_cubierta"
+												required
+											/>
+										</div>
+									</div>
 								</div>
-
-								</div>
-								  <div class="form-group">
-
+								<div class="form-group">
 									<div class="row">
-									<div class="col-sm-6">
-									<label for="piso_dpto">Piso departamento</label>
+										<div class="col-sm-6">
+											<label for="piso_dpto"
+												>Piso
+												departamento</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="piso_dpto"
+												placeholder="Ingrese ..."
+												name="piso_dpto"
+											/>
+										</div>
+										<div class="col-sm-6">
+											<label for="numero_dpto"
+												>Número
+												departamento</label
+											>
+											<input
+												type="number"
+												class="form-control"
+												id="numero_dpto"
+												placeholder="Ingrese ..."
+												name="numero_dpto"
+											/>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="fecha_construccion"
+										>Fecha de construcción</label
+									>
 									<input
-									  type="number"
-									  class="form-control"
-									  id="piso_dpto"
-									  placeholder="Ingrese ..."
-									  name="piso_dpto"
+										type="date"
+										class="form-control"
+										id="fecha_construccion"
+										name="fecha_construccion"
+										required
 									/>
 								</div>
-								<div class="col-sm-6">
-									<label for="numero_dpto">Número departamento</label>
-									<input
-									  type="number"
-									  class="form-control"
-									  id="numero_dpto"
-									  placeholder="Ingrese ..."
-									  name="numero_dpto"
-									/>
-								</div>
-								  </div>
-								</div>
 
-								  <div class="form-group">
-									<label for="fecha_construccion">Fecha de construcción</label>
-									<input
-									  type="date"
-									  class="form-control"
-									  id="fecha_construccion"
-									  name="fecha_construccion"
-									  required
-									/>
-								  </div>
-
-
-									<label for="cant_artefactos">Cantidad de artefactos</label>
-									<input
-									  type="number"
-									  class="form-control"
-									  id="cant_artefactos"
-									  placeholder="Ingrese ..."
-									  name="cant_artefactos"
-									  required
-									/>
-
+								<label for="cant_artefactos"
+									>Cantidad de artefactos</label
+								>
+								<input
+									type="number"
+									class="form-control"
+									id="cant_artefactos"
+									placeholder="Ingrese ..."
+									name="cant_artefactos"
+									required
+								/>
 							</div>
 							<!-- /.card-body -->
 						</div>
@@ -490,13 +506,14 @@
 										<select
 											class="select2 agregarAmbiente"
 											style="width: 100%"
-											name="ambiente_nombre"
+											name="nombre"
 										>
 											<option
 												disabled
 												selected
 											>
-											Seleccione un ambiente
+												Seleccione un
+												ambiente
 											</option>
 											<option>
 												Dormitorio
@@ -580,7 +597,7 @@
                   class="form-control"
                   id="${data.id}SuperficieInput"
                   placeholder="Ingrese ..."
-				  name="ambiente_superficie"
+				  name="superficie"
                 />
               </div>
             `);
@@ -592,7 +609,7 @@
                 <select
                   class="select2 ${elementSelect2}"
                   style="width: 100%"
-				  name="ambiente_nombre"
+				  name="nombre"
                 >
                   <option disabled selected>Seleccione un ambiente</option>
                   <option>Dormitorio</option>

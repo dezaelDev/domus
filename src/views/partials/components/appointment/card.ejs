@@ -1,0 +1,99 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12">
+			<!-- Default box -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">
+						ACTIVIDAD NRO. <%=appointment.id_cita %>
+					</h3>
+					<div class="card-tools">
+						<button
+							type="button"
+							class="btn btn-tool"
+							data-card-widget="collapse"
+							title="Collapse"
+						>
+							<i class="fas fa-minus"></i>
+						</button>
+					</div>
+				</div>
+				<div class="card-body">
+					<table
+						id="example2"
+						class="table table-bordered table-hover"
+					>
+						<thead>
+							<tr>
+								<th>Cliente</th>
+								<th>Nombre y Apellido</th>
+								<th>Dirección</th>
+								<th>Teléfono</th>
+								<th>Fecha y Hora</th>
+								<th>Estado</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<!--Codigo identificador Cliente-->
+								<td>
+									<label name=""
+										><%= appointment.id_cliente %>
+									</label>
+								</td>
+								<td>
+									<label name="nombre_apellido"
+										>Esteban</label
+									>
+								</td>
+								<td>
+									<label name="direccion"
+										>Uspallata 1552</label
+									>
+								</td>
+								<td>
+									<label name="telefono"
+										>37854656565</label
+									>
+								</td>
+								<td>
+									<label name="fecha_hs" type="text"
+										>30/11/2022</label
+									>
+								</td>
+								<td>
+									<label name="estado"
+										>Pendiente</label
+									>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<button
+						type="button"
+						name="finalizar"
+						style="width: 150px; margin-top: 5px"
+						class="btn btn btn-success"
+					>
+						FINALIZAR
+					</button>
+					<button
+						type="button"
+						name="cancelar"
+						style="width: 150px; margin-top: 5px"
+						class="btn btn btn-danger"
+					>
+						CANCELAR
+					</button>
+					<!--CONTROL MODAL DE CANCELAR (POR SI HACE FALTA)-->
+					<!-- <button type="button" name="cancelar" class="btn btn-danger" style="width: 150px; margin-top: 5px;" data-toggle="modal" data-target="#modal-danger">
+                                  CANCELAR
+                                </button> -->
+				</div>
+				<!-- /.card-body -->
+
+				<!-- /.card-body -->
+			</div>
+		</div>
+	</div>
+</div>
