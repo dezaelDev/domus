@@ -45,6 +45,46 @@ export const getRealEstates = async () => {
 	} catch (error) {}
 };
 
+export const getCatalog = async () => {
+	try {
+		const pool = await connection();
+
+		const result = await pool.request().query(`SELECT
+		P.codigo_propiedad,
+		P.descripcion_breve,
+		P.disponibilidad,
+		TP.[nombre] AS tipo,
+		P.tipo_oferta,
+		P.precio_inmueble,
+		PR.nombre + ', ' + L.nombre AS ubicacion,
+		P.calle + ', ' + P.altura AS direccion,
+		P.piso_dpto,
+		P.numero_dpto,
+		P.fecha_construccion,
+		P.superficie_total,
+		P.superficie_cubierta,
+		P.servicio_electricidad,
+		P.servicio_agua,
+		P.servicio_gas,
+		P.servicio_internet,
+		P.cant_artefactos,
+		P.descripcion_detallada,
+		P.fecha_publicacion
+		FROM
+		[Domus].[dbo].[propiedad] AS P JOIN
+		[Domus].[dbo].[tipo_propiedad] AS TP ON
+		P.id_tipo_propiedad = TP.id_tipo_propiedad JOIN
+		[Domus].[dbo].[provincia] AS PR ON
+		P.id_provincia = PR.id_provincia JOIN
+		[Domus].[dbo].[localidad] AS L ON
+		P.id_localidad = L.id_localidad`);
+
+		return result.recordset;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
 /**
  *
  * @param object body contains fields and values of form

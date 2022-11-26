@@ -39,24 +39,19 @@
 					<label
 						>Código: <%= realestate.codigo_propiedad %> </label
 					><br />
-					<label>Tipo:<%= realestate.id_tipo_propiedad %> </label
-					><br />
+					<label>Tipo:<%= realestate.tipo %> </label><br />
 					<label
 						>Precio: $<%= realestate.precio_inmueble %></label
 					><br />
 					<!--Provincia, ciudad-->
-					<label
-						>Ubicación: provincia<%= realestate.id_provincia
-						%> localidad<%= realestate.id_localidad %></label
+					<label>Ubicación: <%= realestate.ubicacion %></label
 					><br />
 					<!--Calle,altura, piso, departamento -->
-					<label
-						>Dirección:<%= realestate.calle %> <%=
-						realestate.altura %> </label
+					<label>Dirección:<%= realestate.direccion %></label
 					><br />
 					<!--Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
 
-					><br />
+					<br />
 					<!--FIN de Parte DINÁMICA de Ambientes: dormitorio, baño, suites-->
 					<label
 						>Fecha de Construcción:<%=
