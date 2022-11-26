@@ -1,4 +1,8 @@
-import { connection, generateParamsByValues } from '../database/connection';
+import {
+	connection,
+	generateParamsByValues,
+	sql,
+} from '../database/connection';
 const Validator = require('Validator');
 
 const tableName = '[Domus].[dbo].[propiedad]';
@@ -71,6 +75,22 @@ export const createRealEstate = async (body) => {
 		const result = await request.query(sqlquery);
 
 		return result.rowsAffected;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+export const setStateById = async (id, state) => {
+	try {
+		const pool = await connection();
+
+		const result = await pool
+			.request()
+			.query(
+				`UPDATE ${tableName} SET disponibilidad = ${state} WHERE codigo_propiedad = ${id}`
+			);
+
+		return result.recordset;
 	} catch (error) {
 		console.log(error);
 	}

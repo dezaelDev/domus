@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 var engine = require('ejs-layout');
+import cors from 'cors';
 
 import config from './config';
 import path from 'path';
@@ -9,7 +10,7 @@ import realestateRoutes from './routes/realestate';
 import testRoutes from './routes/test';
 import adminRoutes from './routes/admin';
 import appointmentRoutes from './routes/appointment';
-
+import dbRoutes from './routes/db';
 const app = express();
 
 const port = config.port;
@@ -21,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(morgan('dev'));
-
+app.use(cors());
 app.use(express.static(path.join(__dirname + '/public')));
 app.set('views', path.join(__dirname + '/views'));
 
@@ -30,15 +31,20 @@ app.set('view engine', 'ejs');
 app.engine('ejs', engine.__express);
 
 //ROUTES
-app.use('/customers', customerRoutes)
-app.use('/customers', express.static(path.join(__dirname + '/public')))
-app.use('/test', testRoutes)
-app.use('/test', express.static(path.join(__dirname + '/public')))
-app.use('/admin', adminRoutes)
-app.use('/admin', express.static(path.join(__dirname + '/public')))
-app.use('/appointment', appointmentRoutes)
-app.use('/appointment', express.static(path.join(__dirname + '/public')))
-app.use('/realestates', realestateRoutes)
-app.use('/realestates', express.static(path.join(__dirname + '/public')))
+app.get('/', (req, res) => {
+	res.send('VERSION 1.0.0');
+});
+app.use('/customers', customerRoutes);
+app.use('/customers', express.static(path.join(__dirname + '/public')));
+app.use('/test', testRoutes);
+app.use('/test', express.static(path.join(__dirname + '/public')));
+app.use('/admin', adminRoutes);
+app.use('/admin', express.static(path.join(__dirname + '/public')));
+app.use('/appointment', appointmentRoutes);
+app.use('/appointment', express.static(path.join(__dirname + '/public')));
+app.use('/realestates', realestateRoutes);
+app.use('/realestates', express.static(path.join(__dirname + '/public')));
+
+app.use('/db', dbRoutes);
 
 export default app;

@@ -1,9 +1,19 @@
 <% if (disponibilidad == 1 || disponibilidad == true) { %>
 <!-- -->
-<a href="#<%= codigo_propiedad %>" class="btn btn-success">Disponible</a>
+<a
+	href="#<%= codigo_propiedad %>"
+	onclick="setState('<%= codigo_propiedad %>', 0)"
+	class="btn btn-success"
+	>Disponible</a
+>
 <!-- -->
 <% } else { %>
 <!-- -->
-<a href="#<%= codigo_propiedad %>" class="btn btn-danger">No Disponible</a>
+<a
+	href="#<%= codigo_propiedad %>"
+	onclick="setState('<%= codigo_propiedad %>', 1)"
+	class="btn btn-danger"
+	>No Disponible</a
+>
 <!-- -->
 <% } %>
