@@ -1,4 +1,4 @@
-INSERT INTO [tipo_propiedad] (name)
+INSERT INTO [tipo_propiedad] (nombre)
 VALUES
   ('departamento'),
   ('quincho'),
