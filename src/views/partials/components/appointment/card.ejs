@@ -25,8 +25,10 @@
 					>
 						<thead>
 							<tr>
+								<th>Cliente Nro.</th>
 								<th>Cliente</th>
-								<th>Nombre y Apellido</th>
+								<th>Motivo</th>
+								<th>Ubicacion</th>
 								<th>Dirección</th>
 								<th>Teléfono</th>
 								<th>Fecha y Hora</th>
@@ -42,49 +44,55 @@
 									</label>
 								</td>
 								<td>
-									<label name="nombre_apellido"
-										>Esteban</label
+									<label name="cliente"
+										><%=appointment.nombre_apellido_cliente
+										?
+										appointment.nombre_apellido_cliente
+										: appointment.razon_social
+										%></label
+									>
+								</td>
+								<td>
+									<label name="motivo"
+										><%= appointment.motivo
+										%></label
+									>
+								</td>
+								<td>
+									<label name="ubicacion"
+										><%= appointment.ubicacion
+										%></label
 									>
 								</td>
 								<td>
 									<label name="direccion"
-										>Uspallata 1552</label
+										><%= appointment.direccion
+										%></label
 									>
 								</td>
 								<td>
 									<label name="telefono"
-										>37854656565</label
+										><%= appointment.telefono
+										%></label
 									>
 								</td>
 								<td>
 									<label name="fecha_hs" type="text"
-										>30/11/2022</label
+										><%= appointment.fecha_hs
+										%></label
 									>
 								</td>
 								<td>
 									<label name="estado"
-										>Pendiente</label
+										><%= appointment.estado
+										%></label
 									>
 								</td>
 							</tr>
 						</tbody>
 					</table>
-					<button
-						type="button"
-						name="finalizar"
-						style="width: 150px; margin-top: 5px"
-						class="btn btn btn-success"
-					>
-						FINALIZAR
-					</button>
-					<button
-						type="button"
-						name="cancelar"
-						style="width: 150px; margin-top: 5px"
-						class="btn btn btn-danger"
-					>
-						CANCELAR
-					</button>
+					<%- include('./btn.ejs',{estado: appointment.estado})
+					%>
 					<!--CONTROL MODAL DE CANCELAR (POR SI HACE FALTA)-->
 					<!-- <button type="button" name="cancelar" class="btn btn-danger" style="width: 150px; margin-top: 5px;" data-toggle="modal" data-target="#modal-danger">
                                   CANCELAR

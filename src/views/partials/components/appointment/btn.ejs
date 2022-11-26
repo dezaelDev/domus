@@ -1,0 +1,29 @@
+<!-- PENDIENTE --- EN PROCESO  --- CANCELADO -- FINALIZADO -->
+
+<% if (estado == 'pendiente' ) { %>
+<button
+	type="button"
+	name="iniciar"
+	style="width: 150px; margin-top: 5px"
+	class="btn btn btn-success"
+>
+	INICIAR
+</button>
+<button
+	type="button"
+	name="cancelar"
+	style="width: 150px; margin-top: 5px"
+	class="btn btn btn-danger"
+>
+	CANCELAR
+</button>
+<% } else if (estado == 'en proceso') { %>
+<button
+	type="button"
+	name="finalizar"
+	style="width: 150px; margin-top: 5px"
+	class="btn btn btn-success"
+>
+	FINALIZAR
+</button>
+<% } %>

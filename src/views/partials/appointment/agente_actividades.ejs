@@ -60,8 +60,16 @@
 	<section class="content">
 		<!--COLLAPSE accordion-->
 
+		<!--header para buscador por fecha y hs-->
+		<div class="card-header">
+			<label>Actividades</label>
+			<input name="fecha_hs" type="date" />
+			<button type="button" name="buscar" class="btn btn btn-primary">
+				BUSCAR
+			</button>
+		</div>
+
 		<!--ACTIVIDADES-->
-		<p>INICIO</p>
 
 		<% appointments.forEach(element => { %> <%-
 		include('../partials/components/appointment/card',{appointment:
