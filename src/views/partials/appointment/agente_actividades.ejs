@@ -63,10 +63,15 @@
 		<!--header para buscador por fecha y hs-->
 		<div class="card-header">
 			<label>Actividades</label>
-			<input name="fecha_hs" type="date" />
-			<button type="button" name="buscar" class="btn btn btn-primary">
+			<input id="input-buscar" name="fecha_hs" type="date" />
+			<a
+				onclick="return consultarFecha(this.id)"
+				href="#"
+				name="buscar"
+				class="btn btn btn-primary"
+			>
 				BUSCAR
-			</button>
+			</a>
 		</div>
 
 		<!--ACTIVIDADES-->
@@ -82,4 +87,20 @@
 	<!-- /.content -->
 </div>
 
-<%+ endSection %>
+<%+ endSection %> <%+ section('scripts') %>
+<script type="text/javascript">
+	function consultarFecha(id) {
+		let input = document.getElementById('input-buscar');
+
+		let a = document.getElementById(id);
+
+		if (input.value !== '') {
+			location.href = `http://localhost:3000/appointments/agent-activities/${input.value}`;
+		} else {
+			location.href = `http://localhost:3000/appointments/agent-activities`;
+		}
+
+		return false;
+	}
+</script>
+<%+ endSection%>

@@ -4,8 +4,16 @@ import {
 	generateParamsByValues,
 } from '../database/connection';
 
-export const getAppointments = async (fecha = null) => {
+export const getAppointments = async (fecha = null, agente = null) => {
 	try {
+		let dateQuery;
+		if (fecha !== null) {
+			dateQuery = `C.fecha_hs = CAST('${fecha.toString()}' AS DATE)`;
+			console.log(dateQuery);
+		} else {
+			dateQuery = 'C.fecha_hs >= GETDATE()';
+		}
+
 		const pool = await connection();
 
 		const result = await pool.request().query(`SELECT
@@ -34,8 +42,8 @@ export const getAppointments = async (fecha = null) => {
             P.id_localidad = L.id_localidad JOIN
             [Domus].[dbo].actividad AS A ON
             C.id_actividad = A.id_actividad
-            WHERE
-            C.fecha_hs >= GETDATE()
+            WHERE ${dateQuery}
+            
             `);
 
 		console.log(result.recordset);
