@@ -4,7 +4,7 @@ SELECT
   P.codigo_propiedad,
   P.descripcion_breve,
   P.disponibilidad,
-  TP.[name] AS tipo,
+  TP.[nombre] AS tipo,
   P.tipo_oferta,
   P.precio_inmueble,
   PR.nombre + ', ' + L.nombre AS ubicacion,
