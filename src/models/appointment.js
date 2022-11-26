@@ -4,6 +4,8 @@ import {
 	generateParamsByValues,
 } from '../database/connection';
 
+const fillable = [];
+
 export const getAppointments = async (fecha = null, agente = null) => {
 	try {
 		let dateQuery;
